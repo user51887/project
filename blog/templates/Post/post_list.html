@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+
+
+<!-- Page Title START -->
+<div class="main-wrap">
+	<div class="cover_1 cover_sm">
+	<div class="img_bg page-title jarallax black-overlay-20" data-jarallax data-speed="0.6" style="background-image:url('/static/site_static/g.jpg');">
+	 <div class="container">
+		<h1>Nos Articles</h1>
+		<ul>
+			<li><a href="}">Comprehensive Dentistery</a></li>
+			<li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+			<li><a href="">Nos Articles</a></li>
+			
+		</ul>
+	 </div>
+    </div>
+	</div>
+</div>
+<!-- Page Title END -->
+
+
+<!-- Blog Grid Section START -->
+<div id="blo" class="section-block">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<small>Blog</small>
+			<h2 class="bold">Découvrez Nos Plus <span class="italic libre-baskerville  " style="color:rgb(60,136,126)">Récents Articles.</span></h2>
+			<div class="section-heading-line"></div>
+			<p>Articles sur la santé dentaire</p>
+		</div>				
+		<div class="row mt-40">
+
+            {% for post in post_list %}
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="blog-grid-simple">
+					<h4><a href="{% url 'blog:post_detail' post.id %}">{{post.title}}</a></h4>
+					<p>{{post.text|truncatewords:20}}</p>
+					<div class="blog-grid-simple-content">
+						<div class="blog-grid-simple-date">
+							<div class="row">
+								<div class="col-md-2 col-sm-2 col-2 pr-0">
+									<i class="fa fa-calendar"></i>
+								</div>
+								<div class="col-md-5 col-sm-5 col-5 pl-0">
+									<h5>{{post.created_date}}</h5>
+								</div>
+						 <div class="blog-grid-3-button left-holder">
+							<a href="{% url 'blog:post_detail' post.id %}">Lire Article <i class="fa fa-chevron-right"></i></a>
+						 </div>
+						 </div>
+						</div>
+					</div>
+				</div>
+			</div>
+            {% endfor %}
+												
+		</div>
+	</div>
+
+	
+</div>
+<!-- Blog Grid Section END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+

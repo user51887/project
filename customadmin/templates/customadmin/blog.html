@@ -1,0 +1,60 @@
+<!-- dashboard.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block body %}
+
+<!-- Blog Grid Section START -->
+<div id="blo" class="section-block">
+    <div class="container">
+        <div class="section-heading center-holder">
+            <small>Blog</small>
+            <h2 class="bold">Découvrez Nos Plus <span class="italic libre-baskerville  "
+                    style="color:rgb(60,136,126)">Récents Articles.</span></h2>
+            <div class="section-heading-line"></div>
+            <p>Articles sur la santé dentaire</p>
+        </div>
+        <div class="row mt-40">
+
+            {% for post in blogs %}
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="blog-grid-simple">
+                    <h4><a href="{% url 'customadmin:post_detail' post.id %}">{{post.title}}</a></h4>
+                    <p>{{post.text|truncatewords:20}}</p>
+                    <div class="blog-grid-simple-content">
+                        <div class="blog-grid-simple-date">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-6 pr-0">
+
+                                    <a class="btn btn-link text-dark px-3 mb-0"
+                                        href="{% url 'customadmin:edit_post' post.id %}"><i
+                                            class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>modifier</a>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right">
+                                    <div class="blog-grid-3-button left-holder">
+                                        <a href="{% url 'blog:post_detail' post.id %}">Lire Article </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+
+            <form method="get" action="{% url 'customadmin:add_post' %}">
+                <button type="submit" class="button-sm primary-button semi-rounded full-width" ">
+                            Ajouter un article
+                        </button>
+                    </form>
+                            
+        </div>
+    </div>
+
+
+</div>
+<!-- Blog Grid Section END -->
+{% endblock %}

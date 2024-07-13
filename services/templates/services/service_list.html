@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  
+
+
+<!-- Page Title START -->
+<div class="page-title jarallax black-overlay-20" data-jarallax data-speed="0.6" style="background-image:url('/static/site_static/20.jpg');">
+	<div class="container">
+		<h1>Nos Services</h1>
+		<ul>
+			<li><a href="">Acceuil</a></li>
+			<li><a href="{% url 'services:service_list'  %}">Nos Services</a></li>
+			
+		</ul>
+	</div>
+</div>
+<!-- Page Title END -->
+
+
+
+
+<!-- Features Section START -->
+<div class="section-block">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<small>Full Service Web Design Agency</small>
+			<h3 class="bold">Notre expertise au service de votre sourire</h3>
+			<div class="section-heading-line"></div>
+			<p>C’est par le souci du détail, l’importance accordée à chacun que 
+			<br>se définit notre service.</p>
+		</div>				
+
+		<div class="row mt-40">
+
+			{% for service in service_list %}
+
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="feature-float clearfix">
+					<div class="feature-float-icon">
+						<img src="{{service.image.url}}" alt="img" height="45px" width="45px">
+					</div>
+					<div class="feature-float-content">
+						<h4><a  href="">{{service.name}}</a></h4>
+						<p>{{service.description|truncatewords:11}}</p>
+					</div>
+				</div>			
+			</div>
+
+			{% endfor %}								
+		</div>
+
+		
+		
+	</div>	
+</div>
+<!-- Features Section END -->
+
+
+
+
+{% endblock body %}

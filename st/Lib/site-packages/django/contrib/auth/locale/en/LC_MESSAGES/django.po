@@ -1,0 +1,396 @@
+# This file is distributed under the same license as the Django package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 13:02+0100\n"
+"PO-Revision-Date: 2010-05-13 15:35+0200\n"
+"Last-Translator: Django team\n"
+"Language-Team: English <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\st\Lib\site-packages\django\contrib\auth\admin.py:49
+msgid "Personal info"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\admin.py:51
+msgid "Permissions"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\admin.py:62
+msgid "Important dates"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\admin.py:156
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\admin.py:168
+msgid "Password changed successfully."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\admin.py:189
+#, python-format
+msgid "Change password: %s"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\apps.py:16
+msgid "Authentication and Authorization"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\base_user.py:50
+msgid "password"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\base_user.py:51
+msgid "last login"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:41
+msgid "No password set."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:49
+msgid "Invalid password format or unknown hashing algorithm."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:91
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:360
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:439
+msgid "The two password fields didn’t match."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:94
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:149
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:182
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:443
+msgid "Password"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:100
+msgid "Password confirmation"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:103
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:454
+msgid "Enter the same password as before, for verification."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:151
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user’s "
+"password, but you can change the password using <a href=\"{}\">this form</a>."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:189
+#, python-format
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:192
+msgid "This account is inactive."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:257
+msgid "Email"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:363
+msgid "New password"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:369
+msgid "New password confirmation"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:407
+msgid "Your old password was entered incorrectly. Please enter it again."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:411
+msgid "Old password"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\forms.py:451
+msgid "Password (again)"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:325
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:418
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:508
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:603
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:654
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:696
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:745
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:791
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:840
+msgid "algorithm"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:326
+msgid "iterations"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:327
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:424
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:510
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:607
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:655
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:697
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:841
+msgid "salt"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:328
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:425
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:608
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:656
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:698
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:746
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:792
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:842
+msgid "hash"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:419
+msgid "variety"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:420
+msgid "version"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:421
+msgid "memory cost"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:422
+msgid "time cost"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:423
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:606
+msgid "parallelism"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:509
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:604
+msgid "work factor"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:511
+msgid "checksum"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\hashers.py:605
+msgid "block size"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:61
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:115
+msgid "name"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:65
+msgid "content type"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:67
+msgid "codename"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:72
+msgid "permission"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:73
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:118
+msgid "permissions"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:125
+msgid "group"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:126
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:257
+msgid "groups"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:248
+msgid "superuser status"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:251
+msgid ""
+"Designates that this user has all permissions without explicitly assigning "
+"them."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:260
+msgid ""
+"The groups this user belongs to. A user will get all permissions granted to "
+"each of their groups."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:268
+msgid "user permissions"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:270
+msgid "Specific permissions for this user."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:342
+msgid "username"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:346
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:350
+msgid "A user with that username already exists."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:353
+msgid "first name"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:354
+msgid "last name"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:355
+msgid "email address"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:357
+msgid "staff status"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:359
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:362
+msgid "active"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:365
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:369
+msgid "date joined"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:378
+msgid "user"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\models.py:379
+msgid "users"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\password_validation.py:111
+#, python-format
+msgid ""
+"This password is too short. It must contain at least %(min_length)d "
+"character."
+msgid_plural ""
+"This password is too short. It must contain at least %(min_length)d "
+"characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\password_validation.py:123
+#, python-format
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\password_validation.py:206
+#, python-format
+msgid "The password is too similar to the %(verbose_name)s."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\password_validation.py:213
+msgid "Your password can’t be too similar to your other personal information."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\password_validation.py:245
+msgid "This password is too common."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\password_validation.py:250
+msgid "Your password can’t be a commonly used password."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\password_validation.py:261
+msgid "This password is entirely numeric."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\password_validation.py:266
+msgid "Your password can’t be entirely numeric."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\templates\registration\password_reset_subject.txt:2
+#, python-format
+msgid "Password reset on %(site_name)s"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\validators.py:12
+msgid ""
+"Enter a valid username. This value may contain only English letters, "
+"numbers, and @/./+/-/_ characters."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\validators.py:22
+msgid ""
+"Enter a valid username. This value may contain only letters, numbers, and "
+"@/./+/-/_ characters."
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\views.py:171
+msgid "Logged out"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\views.py:227
+msgid "Password reset"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\views.py:254
+msgid "Password reset sent"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\views.py:264
+msgid "Enter new password"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\views.py:336
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\views.py:345
+msgid "Password reset complete"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\views.py:357
+msgid "Password change"
+msgstr ""
+
+#: .\st\Lib\site-packages\django\contrib\auth\views.py:380
+msgid "Password change successful"
+msgstr ""

@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Contact Form Section START -->
+<div class="section-block-parallax jarallax black-overlay-70 d-flex align-items-center" data-jarallax data-speed="0.6"
+    style="background-image: url('/static/site_static/11.jpg'); height: 100vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="section-heading white-color left-holder wow fadeIn animated" data-wow-delay=".1s">
+                    <h2 class="bold">Edit Appointment</h2>
+                    <div class="section-heading-line"></div>
+                </div>
+
+                <!-- Contact icons Start -->
+                <div class="mt-0">
+                    <div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
+                        <i class="icon-question"></i>
+
+
+                        <a href="" data-izimodal-open="#modal2">
+                            <h4>Remarques!!!!</h4>
+                        </a>
+                        <!-- Modal Start -->
+                        <div class="izimodal" id="modal2" data-iziModal-width="400px" data-iziModal-fullscreen="true"
+                            data-iziModal-transitionIn="fadeIn" data-iziModal-transitionOut="fadeOut">
+                            <!-- Close Button Start -->
+                            <div class="close-modal">
+                                <button class="close-modal" data-izimodal-close><i class="ti-close"></i></button>
+                            </div>
+                            <!-- Close Button Start -->
+                            <!-- Modal Body Start -->
+                            <div class="modal-inside inner-30 center-holder">
+                                <div class="modal-heading">
+                                    <h4>Raison d'annulation</h4>
+                                </div>
+
+                                <!-- Afficher le contenu du formulaire après enregistrement -->
+                                <p></p>
+
+                            </div>
+                            <!-- Modal Body End -->
+                        </div>
+                        <!-- Modal End -->
+
+                    </div>
+
+                    <div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".2s" data-wow-duration="1.5s">
+                        <i class="icon-calendar"></i>
+                        <a href="">
+                            <h4 data-izimodal-open="#modal1">Annuler</h4>
+                        </a>
+                        <div class="col-md-3 col-sm-6 col-12">
+                            <!-- Modal Start -->
+                            <div class="izimodal" id="modal1" data-iziModal-width="400px"
+                                data-iziModal-fullscreen="true" data-iziModal-transitionIn="comingIn">
+                                <!-- Close Button Start -->
+                                <div class="close-modal">
+                                    <button class="close-modal" data-izimodal-close><i class="ti-close"></i></button>
+                                </div>
+                                <!-- Close Button Start -->
+                                <!-- Modal Body Start -->
+                                <div class="modal-inside inner-30 center-holder">
+                                    <div class="modal-heading">
+                                        <h4>Annuler le rendez-vous</h4>
+                                    </div>
+                                    <!-- Form inside the modal for providing cancel reason -->
+                                    <!-- Inside the modal body -->
+                                    <form id="cancelReasonForm" method="post"
+                                        action="{% url 'customadmin:edit_appointment' appointment.id %}">
+                                        {% csrf_token %}
+                                        <div class="col-12">
+                                            <!--label for="{{ form.cancel_reason.id_for_label }}">Raison
+                                                d'annulation:</label-->
+                                            <input type="text" id="id_cancel_reason" name="cancel_reason" required>
+
+                                        </div>
+                                        <button type="submit" class="primary-button button-sm" name="cancel">Confirmer
+                                            Annulation</button>
+                                    </form>
+
+                                </div>
+                                <!-- Modal Body End -->
+                            </div>
+                            <!-- Modal End -->
+                        </div>
+                    </div>
+
+                    <div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".3s" data-wow-duration="1.5s">
+                        <i class="icon-earth-globe"></i>
+                        <a href="{% url 'customadmin:dashboard' %}">
+                            <h4>Back to Dashboard</h4>
+                        </a>
+                    </div>
+                </div>
+                <!-- Contact icons End -->
+            </div>
+
+            <!-- Contact Form Column Start -->
+            <div class="col-md-5 col-sm-12 col-12 offset-md-1 wow fadeIn animated" data-wow-delay=".3s"
+                data-wow-duration="1.5s">
+                <div class="contact-form-md white-background p-4 rounded">
+                    <h5 class="center-holder mb-4">Confirmation Status</h5>
+                    <!-- Form Start -->
+                    <form id="cancelAppointmentForm" method="post"
+                        action="{% url 'customadmin:edit_appointment' appointment.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="appointment_id" value="{{ appointment.id }}">
+                        <div class="form-group">
+                            <label for="confirmation_status">Select Confirmation Status:</label>
+                            <select class="form-control" name="confirmation_status" id="confirmation_status">
+                                <option value="confirmed" {% if appointment.is_confirmed %}selected{% endif %}>Confirmed
+                                </option>
+                                <option value="not_confirmed" {% if not appointment.is_confirmed %}selected{% endif %}>
+                                    Not Confirmed</option>
+                            </select>
+                        </div>
+                        <button type="submit" name="confirm_submit"
+                            class="primary-button button-sm">Enregistrer</button>
+                    </form>
+                    <!-- Form End -->
+                </div>
+            </div>
+            <!-- Contact Form Column End -->
+        </div>
+    </div>
+</div>
+<!-- Contact Form Section END -->
+
+
+{% endblock %}

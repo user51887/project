@@ -1,0 +1,83 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-taggit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 13:02+0100\n"
+"PO-Revision-Date: 2010-09-07 09:26-0700\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: .\st\Lib\site-packages\taggit\apps.py:7
+msgid "Taggit"
+msgstr ""
+
+#: .\st\Lib\site-packages\taggit\forms.py:31
+msgid "Please provide a comma-separated list of tags."
+msgstr "Bitte eine durch Komma getrennte Schlagwortliste eingeben."
+
+#: .\st\Lib\site-packages\taggit\managers.py:424
+msgid "Tags"
+msgstr "Schlagwörter"
+
+#: .\st\Lib\site-packages\taggit\managers.py:425
+msgid "A comma-separated list of tags."
+msgstr "Eine durch Komma getrennte Schlagwortliste."
+
+#: .\st\Lib\site-packages\taggit\models.py:20
+msgctxt "A tag name"
+msgid "name"
+msgstr "Name"
+
+#: .\st\Lib\site-packages\taggit\models.py:23
+msgctxt "A tag slug"
+msgid "slug"
+msgstr "Kürzel"
+
+#: .\st\Lib\site-packages\taggit\models.py:89
+msgid "tag"
+msgstr "Schlagwort"
+
+#: .\st\Lib\site-packages\taggit\models.py:90
+msgid "tags"
+msgstr ""
+
+#: .\st\Lib\site-packages\taggit\models.py:96
+#, python-format
+msgid "%(object)s tagged with %(tag)s"
+msgstr "%(object)s verschlagwortet mit %(tag)s"
+
+#: .\st\Lib\site-packages\taggit\models.py:141
+msgid "content type"
+msgstr "Inhaltstyp"
+
+#: .\st\Lib\site-packages\taggit\models.py:172
+#: .\st\Lib\site-packages\taggit\models.py:179
+msgid "object ID"
+msgstr "Objekt-ID"
+
+#: .\st\Lib\site-packages\taggit\models.py:187
+msgid "tagged item"
+msgstr "Verschlagwortetes Objekt"
+
+#: .\st\Lib\site-packages\taggit\models.py:188
+msgid "tagged items"
+msgstr "Verschlagwortete Objekte"
+
+#: .\st\Lib\site-packages\taggit\serializers.py:40
+msgid "Expected a list of items but got type \"{input_type}\"."
+msgstr ""
+
+#: .\st\Lib\site-packages\taggit\serializers.py:43
+msgid ""
+"Invalid json list. A tag list submitted in string form must be valid json."
+msgstr ""
+
+#: .\st\Lib\site-packages\taggit\serializers.py:46
+msgid "All list items must be of string type."
+msgstr ""

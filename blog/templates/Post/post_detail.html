@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+
+
+<!-- Page Title START -->
+<div class="main-wrap">
+	<div class="cover_1 cover_sm">
+	<div class="img_bg page-title jarallax black-overlay-20" data-jarallax data-speed="0.6" style="background-image:url('/static/site_static/g.jpg');">
+	 <div class="container">
+		<h1>Nos Articles</h1>
+		<ul>
+			<li><a href="">Acceuil</a></li>
+			<li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+			<li><a href="">Nos Articles</a></li>
+			
+		</ul>
+	 </div>
+    </div>
+	</div>
+</div>
+<!-- Page Title END -->
+
+
+
+{% comment %}
+
+
+
+<!-- Blog Post START -->
+<div class="section-block">
+	<div class="container">
+		<div class="row">
+			<!-- Left Side START -->
+			<div class="col-md-9 col-sm-9 col-xs-12">
+				<div class="blog-post">
+					<img src="{{post_detail.image.url}}" alt="img" class="mb-15">
+					<h4><a href="#">{{post_detail.title}}</a></h4>
+					<ul class="blog-post-info">
+						<li><i class="far fa-user"></i><span>{{post_detail.author}}</span></li>
+						<li><i class="far fa-calendar-alt"></i><span>{{post_detail.created_date }}</span></li>
+					</ul>
+					<p>{{post_detail.text}}</p>	
+					<div class="owl-carousel owl-theme customizable-carousel mt-30" data-loop="true" data-items="3"  data-md-items="3" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
+						<div class="item">
+								<img src="{% static 'site_static\9.jpg' %}"alt="img">
+							</div>
+							<div class="item">
+								<img src="{% static 'site_static\12.jpg' %}"alt="img">
+							</div>	
+							<div class="item">
+								<img src="{% static 'site_static\20.jpg' %}"alt="img">
+							</div>		
+							<div class="item">
+								<img src="{% static 'site_static\16.jpg' %}"alt="img">
+							</div>									
+					</div>	
+								
+				</div>			
+				<!-- Comments Start -->
+				<div class="blog-comments">
+					<h3>Tous Les commentaires:</h3>
+					<div class="blog-comment-user">
+						<div class="row">
+							{% for comment in comments %}
+							<div class="col-md-1 hidden-sm-down pr-0">
+								<img src="{% static 'site_static\Y.jpg' %}" alt="user">
+							</div>
+							
+							<div class="col-md-11 col-xs-12">
+								<div class="comment-block">
+									<h6>{{comment.user}}</h6><strong>{{comment.created}}</strong>
+									<p>
+										{{comment.content}}
+									</p>										
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+						
+					<form method="POST" class="primary-form mt-20">
+						{% csrf_token %}
+						{% bootstrap_form comment_form %}
+						
+							  
+						{% buttons %}
+							<button type="submit" class="primary-button button-sm">Envoyer</button>
+						{% endbuttons %}
+					</form>
+						
+				</div>
+				<!-- Comments End -->
+			</div>
+			<!-- Left Side END -->
+
+			<!-- Right Side START -->
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="blog-post-right">
+	            	<div id="search-input">
+	                	<div class="input-group">
+	                    	<input type="text" class="form-control input-sn" placeholder="Search..."/>
+	                   		<span class="input-group-btn">
+								<button class="btn btn-info btn-md" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+	                   		</span>
+	                	</div>
+	          		</div>
+
+	            	<h4>Articles</h4>
+	            	<div class="blog-post-categories mt-20">
+	            		<ul>
+							
+	            			<li><a href="">Bisphosphonates et soins bucco-dentaires</a></li>
+							<li><a href="">Comment avoir un beau sourire</a></li>
+							<li><a href="">Causes et conséquences de la perte des dents</a></li>
+							<li><a href="">10 mythes et réalités sur le traitement de canal</a></li>
+							
+	            			
+	            		</ul>
+	            	</div>
+
+	            	
+
+	            	
+
+	            	
+				</div>
+			</div>
+			<!-- Right Side END -->
+		</div>
+	</div>
+</div>	
+<!-- Blog Post END -->
+{% endcomment %}
+
+
+
+<!-- Blog Post START -->
+<div class="section-block">
+	<div class="container">
+		<div class="row">
+			<!-- Left Side START -->
+			<div class="col-md-9 col-sm-9 col-xs-12">
+				<div class="blog-post">
+					<img src="{{post_detail.image.url}}"  alt="img" class="mb-15">
+					<h4><a href="#">{{post_detail.title}}</a></h4>
+					<ul class="blog-post-info">
+						<li><i class="far fa-user"></i><span>{{post_detail.author}}</span></li>
+						<li><i class="far fa-calendar-alt"></i><span>{{post_detail.created_date }}</span></li>
+					</ul>
+					<p>{{post_detail.text}}</p>
+					
+						
+					
+													
+				</div>			
+				<!-- Comments Start -->
+				<div class="blog-comments">
+					<h3>All Comments:</h3>
+
+
+					{% for comment in comments %}
+					<div class="blog-comment-user">
+						<div class="row">
+							<div class="col-md-1 hidden-sm-down pr-0">
+								<img src="{% static 'site_static\Y.jpg' %}" alt="user">
+							</div>
+							<div class="col-md-11 col-xs-12">
+								<div class="comment-block">
+									<h6>{{comment.user}}</h6><strong>={{comment.created}}</strong>
+									<p>
+										{{comment.content}}
+									</p>										
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{% endfor %}
+					
+					<h3 class="mt-30">Your Comment:</h3>
+					<form method="POST" class="primary-form mt-20">
+						{% csrf_token %}
+						{% bootstrap_form comment_form %}
+						
+							  
+						{% buttons %}
+							<button type="submit" class="primary-button button-sm">Envoyer</button>
+						{% endbuttons %}
+					</form>	
+				</div>
+				<!-- Comments End -->
+			</div>
+			<!-- Left Side END -->
+
+			<!-- Right Side START -->
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="blog-post-right">
+	            	
+
+	            	<h4>Articles</h4>
+	            	<div class="blog-post-categories mt-20">
+	            		<ul>
+	            			<li><a href="#">Comment avoir un beau sourire</a></li>
+	            			<li><a href="#">Causes et conséquences de la perte des dents</a></li>
+	            			<li><a href="#">10 mythes et réalités sur le traitement de canal</a></li>
+	            			<li><a href="#">Bisphosphonates et soins bucco-dentaires</a></li>
+	            			<li><a href="#">Pas d’ esthétique sans biologie</a></li>
+	            			<li><a href="#">CHIRURGIE PLASTIQUE PARODONTALE & ESTHÉTIQUE DU SOURIRE</a></li>
+	            			<li><a href="#">Extraction dentaire et anticoagulant ou antiagrégant oral : mesures à prendre</a></li>
+	            			
+	            		</ul>
+	            	</div>
+
+	            	
+	            	
+
+	            	
+
+	            	<h4>Share Links</h4>
+	            	<div class="blog-post-follow mt-20">
+	            		<ul>
+	            			<li class="social-facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+							<li class="social-youtube">  <a target="_blank" href=""><i class="fab fa-instagram"></i></a></li>
+	            			
+	            		</ul>
+	            	</div>
+				</div>
+			</div>    
+			<!-- Right Side END -->
+		</div>
+	</div>
+</div>	
+<!-- Blog Post END -->
+
+
+
+
+
+
+{% endblock body %}
+
+
+

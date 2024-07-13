@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+
+
+<div class="page-title jarallax black-overlay-20" data-jarallax data-speed="0.6" style="background-image:url('/static/site_static/a.jpg');">
+	<div class="container">
+		<h1>Contactez-nous</h1>
+		<ul>
+			<li><a href="{% url 'accueil:accueil' %}">Acceuil</a></li>
+			<li><a href="{% url 'contact:send_email' %}">Contact</a></li>
+			<li><a href="{% url 'contact:send_email' %}">Contactez-nous</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+<!-- Contact Section START -->
+<div class="section-block pt-0 pb-0">
+	<div class="container-fluid">
+		
+		<div class="row no-gutters">
+			 
+			<div class="col-md-6 col-sm-6 col-12">
+				
+				<div class="contact-1-box padding-10-perc">
+					<div class="section-heading left-holder">
+						<small style="color:rgb(60,136,126)">Contact</small>
+						<h5 class="bold mt-0">Contactez-nous!</h5>
+					</div>
+					<div class="mt-30">
+						<form class="bordered-form" method="POST">
+							<div class="row">
+								
+								<div class="col-md-12">
+									{% csrf_token %}
+									{% bootstrap_form form %}
+									
+								</div>					
+								<div class="col-md-12 mt-10 mb-30">
+									{% buttons %}
+									<button type="submit" class="primary-button button-sm semi-rounded" style="background-color:rgb(60,136,126); border:2px solid rgb(60,136,126);">Envoyer un Message</button>
+									{% endbuttons %}
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="mt-30">
+						<div class="get-contact-1 rounded-border">
+							<div class="contact-1-box-social">
+								<i class="fas fa-map-marker-alt"></i>
+								<div class="contact-1-box-text">
+									<span>Address :</span>
+									<p>419, BD ABDELLAH EL GUERSIFI AGADIR 80000</p>
+								</div>
+							</div>
+
+							<div class="contact-1-box-social social-left clearfix">
+								<i class="fa fa-envelope"></i>
+								<div class="contact-1-box-text">
+									<span>Email :</span>
+									<p>cabinet.drbenayad@gmail.com</p>
+								</div>
+							</div>
+
+							<div class="contact-1-box-social social-left clearfix">
+								<i class="fas fa-phone-volume"></i>
+								<div class="contact-1-box-text">
+									<span>Téléphone :</span>
+									<p>+212 5283-21492 / +212 639-871415</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-12">
+				<!-- Map START -->
+				<div id="map" class="full-height">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.45694566861!2d-9.538155154709274!3d30.394774914390172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c825dca53777%3A0x6344d611703f001f!2sAl%20Omrane!5e0!3m2!1sfr!2sma!4v1658236295757!5m2!1sfr!2sma" width="2000" height="1000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 	
+				</div>
+				<!-- Map START -->
+			</div>
+		</div>
+	</div>
+</div>			
+
+
+
+
+{% endblock body %}

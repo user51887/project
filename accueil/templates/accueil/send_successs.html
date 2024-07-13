@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+
+
+
+
+<div class="full-screen black-overlay-70 vertical-center" style="background-image: url(/static/site_static/1.jpg);">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-sm-12 col-12 offset-md-1 center-holder">
+				
+				<div class="large-heading center-holder">
+					<h5 class="white-color light ls-none opacity-04">Merci pour votre message!</h5>
+					<h3 class="white-color extra-light ls-none">Nous vous contacterons bientôt.</h3>
+				</div>
+
+				<div class="center-holder">
+				<!-- Subscribe Modal Start -->
+					<div class="mt-30">
+						<a href="{% url 'accueil:accueil' %}" class="primary-button button-sm "  style="background-color:rgb(60,136,126); border:2px solid rgb(60,136,126);">
+							retour à la page d'accueil</a>
+						
+						
+							
+						</div>		
+						<!-- Modal End -->	
+					</div>				
+					<!-- Subscribe Modal End -->					
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+
+<!-- Scroll to top button Start -->
+<a href="#" class="scroll-to-top"><i class="fas fa-chevron-up"></i></a>	
+<!-- Scroll to top button End -->
+
+{% endblock body %}

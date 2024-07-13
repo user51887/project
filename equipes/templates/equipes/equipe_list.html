@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  
+
+
+<!-- Page Title START -->
+<div class="page-title jarallax black-overlay-20" data-jarallax data-speed="0.6" style="background-image:url('/static/site_static/41.jpg');">
+	<div class="container">
+		<h1>Notre Equipe</h1>
+		<ul>
+			<li><a href="{% url 'accueil:accueil' %}">Acceuil</a></li>
+			<li><a href="{% url 'equipes:equipe_list'  %}">Notre Equipe</a></li>
+			
+		</ul>
+	</div>
+</div>
+<!-- Page Title END -->
+
+
+<!-- Team Members Section START -->
+<div class="section-block">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<h3 class="bold">Rencontrez<span class="italic libre-baskerville " style="color:rgb(60,136,126)"> Notre Équipe</span></h3>
+			<div class="section-heading-line"></div>
+			<p>Notre Cabinet est fier de présenter une équipe de professionnels pour votre service.</p>
+		</div>			
+		<div class="row mt-30">
+			<div class="owl-carousel owl-theme" id="team-block"> 
+
+                {% for equipe in equipe_list %} 
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">{{equipe.name}}</a></h4>
+								<h6 class="italic libre-baskerville" style="color:rgb(60,136,126)">{{equipe.title}}</h6>
+								<p>{{equipe.bio}}</p>
+								<ul>
+									<li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+									<li> <a href="#"><i class="fab fa-google"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-12">
+							<div class="team-block-img">
+								<img src="{{equipe.image.url}}" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+		        {% endfor %}
+											
+			</div>
+		</div>	
+	</div>
+</div>
+<!-- Team Members Section END -->
+
+
+
+
+
+
+
+
+{% endblock body %}

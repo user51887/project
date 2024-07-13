@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+
+<!-- Testimonials Style 1 START -->
+<div class="section-block-grey" style="background-image: url(/static/site_static/mail.jpeg);">
+    <div class="container">
+        {% if messages %}
+        <div class="alert alert-success" role="alert">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="row">
+
+            {% for contact in msg %}
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="testmonial-box">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2 pr-0">
+                            <div class="testmonial-box-image">
+                                <img src="{% static 'site_static/msg.jpeg' %}" alt="image">
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-sm-10">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-6">
+                                    <h5>{{ contact.sujet }}</h5>
+                                    <span>{{ contact.email }}</span>
+                                </div>
+                            </div>
+                            <p>{{ contact.message }}</p>
+                        </div>
+                    </div>
+                    <a href="{% url 'customadmin:delete_message' contact.id %}"
+                        class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                        data-original-title="Edit user">
+                        supprimer
+                    </a>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
